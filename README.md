@@ -1,0 +1,1 @@
+This project is simply python learning course.
