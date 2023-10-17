@@ -25,7 +25,7 @@ class Employee:
 
 print('Number of employees: ' + str(Employee.num_of_emps))
 emp_1 = Employee('Corey', 'Shafer', 50000)
-emp_2 = Employee('Test','User',600000)
+emp_2 = Employee('Test', 'User', 600000)
 
 # full name and email
 print(Employee.fullname(emp_1))
@@ -57,7 +57,7 @@ print(Employee.raise_amount)
 print(emp_1.raise_amount)
 print(emp_2.raise_amount)
 print('-----------------------')
-# there is raise_amount in emp1 namespace so it returns that value before checking it in the class
+# there is raise_amount in emp1 namespace, so it returns that value before checking it in the class
 print(emp_1.__dict__)
 print('-----------------------')
 # number of employees
