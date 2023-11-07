@@ -24,6 +24,17 @@ class Employee1:
     def fullname(self):
         return f'{self.first} {self.last}'.strip().title()
 
+    @fullname.setter
+    def fullname(self, name):
+        first, last = name.split(' ')
+        self.first = first
+        self.last = last
+
+    @fullname.deleter
+    def fullname(self):
+        print('Delete Name!')
+        self.first = None
+        self.last = None
 
 print('----------------class without property----------------------------')
 emp_1 = Employee('   john   ', 'smith   ')
@@ -51,3 +62,15 @@ emp_2.first = 'edward'
 print('name change: ' + emp_2.first)
 print(emp_2.email)
 print(emp_2.fullname)
+
+print('----------------------SETTER--------------------------')
+# this will throw an error if there is no setter -> @fullname setter
+emp_2.fullname = 'mark egg'
+print('fullname change: ' + emp_2.fullname)
+print(emp_2.email)
+print(emp_2.fullname)
+
+print('-------------------------"DELETER"---------------------')
+del emp_2.fullname
+print(emp_2.first)
+print(emp_2.last)
